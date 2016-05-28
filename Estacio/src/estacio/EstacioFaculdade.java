@@ -6,6 +6,7 @@
 package estacio;
 
 import domain.entities.Faculdade;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,14 +15,34 @@ import java.util.List;
  */
 public class EstacioFaculdade implements domain.interfaces.Faculdade{
 
-    @Override
-    public List<Faculdade> Lista() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private final Faculdade faculdade;
+    
+    public EstacioFaculdade() {
+        faculdade = new Faculdade();
+        faculdade.setQuantidadeAlunos(10);
+        faculdade.setQuantidadeCursos(15);
     }
 
     @Override
-    public void CompletaFrare(Faculdade obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Faculdade> Lista() {
+        Faculdade f1 = new Faculdade();
+        f1.setQuantidadeAlunos(2);
+        f1.setQuantidadeCursos(3);
+        
+        Faculdade f2 = new Faculdade();
+        f2.setQuantidadeAlunos(4);
+        f2.setQuantidadeCursos(5);
+        
+        List<Faculdade> f = new ArrayList<>();
+        f.add(f1);
+        f.add(f2);
+        f.add(faculdade);
+        return f;
+    }
+
+    @Override
+    public String CompletaFrare(Faculdade obj) {
+        return "Temos "+ faculdade.getQuantidadeAlunos() + " Alunos e " + faculdade.getQuantidadeCursos() + " cursos";
     }
     
 }
