@@ -14,5 +14,5 @@ import java.util.List;
  */
 public interface App<T> {
     List<T> Lista();
-    String CompletaFrare(T obj);
+    String CompletaFrase(T obj);
 }

@@ -22,6 +22,10 @@ public class EstacioFaculdade implements domain.interfaces.Faculdade{
         faculdade.setQuantidadeAlunos(10);
         faculdade.setQuantidadeCursos(15);
     }
+    
+    public Faculdade getInstance(){
+        return faculdade;
+    }
 
     @Override
     public List<Faculdade> Lista() {
@@ -41,7 +45,7 @@ public class EstacioFaculdade implements domain.interfaces.Faculdade{
     }
 
     @Override
-    public String CompletaFrare(Faculdade obj) {
+    public String CompletaFrase(Faculdade obj) {
         return "Temos "+ faculdade.getQuantidadeAlunos() + " Alunos e " + faculdade.getQuantidadeCursos() + " cursos";
     }
     

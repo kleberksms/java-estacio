@@ -20,7 +20,7 @@ public class EstacioColegio implements domain.interfaces.Colegio{
     }
 
     @Override
-    public String CompletaFrare(Colegio obj) {
+    public String CompletaFrase(Colegio obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
