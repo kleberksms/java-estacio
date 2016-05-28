@@ -10,5 +10,24 @@ package domain.entities;
  * @author kleberksms
  */
 public class Faculdade {
+    private int quantidadeAlunos;
+    private int quantidadeCursos;
+
+    public int getQuantidadeAlunos() {
+        return quantidadeAlunos;
+    }
+
+    public void setQuantidadeAlunos(int quantidadeAlunos) {
+        this.quantidadeAlunos = quantidadeAlunos;
+    }
+
+    public int getQuantidadeCursos() {
+        return quantidadeCursos;
+    }
+
+    public void setQuantidadeCursos(int quantidadeCursos) {
+        this.quantidadeCursos = quantidadeCursos;
+    }
+    
     
 }
