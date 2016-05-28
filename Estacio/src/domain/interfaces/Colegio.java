@@ -5,14 +5,10 @@
  */
 package domain.interfaces;
 
-import java.util.List;
-
 /**
  *
  * @author kleberksms
- * @param <T>
  */
-public interface App<T> {
-    List<T> Lista();
-    void CompletaFrare(T obj);
+public interface Colegio extends App<domain.entities.Colegio>{
+    
 }

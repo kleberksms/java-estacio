@@ -25,8 +25,8 @@ import javax.swing.UIManager;
  */
 public class Estacio extends JApplet {
     
-    private static final int JFXPANEL_WIDTH_INT = 300;
-    private static final int JFXPANEL_HEIGHT_INT = 250;
+    private static final int JFXPANEL_WIDTH_INT = 600;
+    private static final int JFXPANEL_HEIGHT_INT = 600;
     private static JFXPanel fxContainer;
 
     /**
