@@ -7,6 +7,8 @@ package estacio;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
@@ -82,13 +84,26 @@ public class Estacio extends JApplet {
             
             @Override
             public void handle(ActionEvent event) {
-                EstacioFaculdade ef = new EstacioFaculdade();
-                btn.setText(ef.CompletaFrase(ef.getInstance()));
+                try {
+                    btn.setText(getFraseCompleta());
+                } catch (Exception ex) {
+                    Logger.getLogger(Estacio.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
         StackPane root = new StackPane();
         root.getChildren().add(btn);
         fxContainer.setScene(new Scene(root));
     }
+    
+    private String getFraseCompleta() throws Exception{
+        try {
+               EstacioFaculdade ef = new EstacioFaculdade();
+               return ef.CompletaFrase(ef.getInstance());
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        } 
+    }
+   
     
 }
